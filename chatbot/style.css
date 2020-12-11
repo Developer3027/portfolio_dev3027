@@ -1,0 +1,103 @@
+* {
+	font-family: 'Inconsolata', monospace;
+	font-size: 14pt;
+}
+
+a {
+	color: chartreuse;
+}
+
+body {
+	background-color: #333333;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	margin: 0 10px;
+}
+
+span {
+	display: inline-block;
+}
+
+.split {
+	display: grid;
+	grid-template-columns: 45% 5% 45%;
+	/* margin: 0 20px; */
+}
+
+.left {
+	border: 3px solid rgb(45, 45, 45);
+	min-width: 310px;
+	width: 100%;
+	padding: 1rem;
+	/* margin-right: 10px; */
+	color: turquoise;
+}
+
+.right {
+	border: 3px solid rgb(45, 45, 45);
+	display: flex;
+	flex-direction: column;
+	min-width: 310px;
+	width: 100%;
+	height: 500px;
+	padding: 0.5rem;
+	overflow-y: scroll;
+}
+
+/* .chat {
+	width: 300px;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+} */
+
+.actions {
+	display: flex;
+	align-items: flex-start;
+	padding-left: 15px;
+	/* width: 100%; */
+}
+
+.actions input {
+	height: 30px;
+	/* display: flex; */
+	width: 300px;
+	background: #343434;
+	color: white;
+	outline: 0;
+	border: 0;
+}
+
+.messages div {
+	/* max-width: 40%; */
+	/* display: block; */
+	margin: 5px;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+.messages .bot {
+	text-align: left;
+	margin-right: auto;
+	color: lightgreen;
+	background: #343434;
+}
+
+.messages .self {
+	text-align: left;
+	margin-right: auto;
+	color: cyan;
+	background: #353535;
+}

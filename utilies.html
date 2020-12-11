@@ -1,0 +1,76 @@
+<section id="utilis" class="utilis">
+	<div class="c-panel">
+		<label class="check-label m-sml" for="btn1"
+			>button 1
+			<input
+				type="checkbox"
+				class="m-sml"
+				name="check"
+				id="btn1"
+				onclick="onlyOne('box1', this)"
+				onblur="hide('box1')"
+			/>
+		</label>
+
+		<label class="check-label m-sml" for="btn2"
+			>button 2
+			<input
+				type="checkbox"
+				class="m-sml"
+				name="check"
+				id="btn2"
+				onclick="onlyOne('box2', this)"
+				onblur="hide('box2')"
+			/>
+		</label>
+	</div>
+	<div class="c-dash">
+		<div id="box1" class="box1 toggle" onfocus="play(box1)">
+			<div class="calc-grid">
+				<div class="output">
+					<div data-previous-operand class="previous-calc"></div>
+					<div data-current-operand class="current-calc"></div>
+				</div>
+				<button data-all-clear class="span-two">AC</button>
+				<button data-delete>DEL</button>
+				<button data-operation>/</button>
+				<!-- divide -->
+				<button data-number>1</button>
+				<button data-number>2</button>
+				<button data-number>3</button>
+				<button data-operation>*</button>
+				<!-- multiply -->
+				<button data-number>4</button>
+				<button data-number>5</button>
+				<button data-number>6</button>
+				<button data-operation>+</button>
+				<!-- plus -->
+				<button data-number>7</button>
+				<button data-number>8</button>
+				<button data-number>9</button>
+				<button data-operation>-</button>
+				<!-- minus -->
+				<button data-number>&#46;</button>
+				<!-- period -->
+				<button data-number>0</button>
+				<button data-equals class="span-two">=</button>
+				<!-- equal -->
+			</div>
+		</div>
+
+		<div id="box2" class="box2 toggle" onshow="play(box2)">
+			<div id="box" class="info-box">
+				<time id="time"></time>
+				<h1 class="light">
+					<span class="light" id="greeting" contenteditable="true"></span>
+					<span class="light" id="name" contenteditable="true"></span>
+				</h1>
+				<h2 class="light">What is the focus for today?</h2>
+				<h2 class="light" id="focus" contenteditable="true"></h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="time.js"></script>
+<script src="calculator.js"></script>
